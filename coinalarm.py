@@ -1,7 +1,5 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
-# usage: coinalarm.py <name of cryptocoin> <price in dollars to trigger alarm>
-# example: coinalarm.py bitcoin 1500
 from bs4 import BeautifulSoup
 import requests, smtplib, time, sys
 

@@ -1,5 +1,5 @@
 # coinalarm
-A python script that fetches the price of any cryptocoin listed on coinmarketcap.com and sends a email via Gmail when the coin has surpassed, or fallen below, a specified price.
+A python script that fetches the price of any cryptocoin listed on coinmarketcap.com and sends a email when the coin has surpassed, or fallen below, a specified price.
 
 Required packages: bs4
 

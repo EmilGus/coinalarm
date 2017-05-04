@@ -49,4 +49,4 @@ except:
 example: coinalarm.py bitcoin 1500 rising")
 
 while True:
-	checkAlarm()
+	checkAlarm(method)

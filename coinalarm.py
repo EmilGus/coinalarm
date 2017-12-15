@@ -1,13 +1,11 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
-from bs4 import BeautifulSoup
-import requests, smtplib, time, sys
+import urllib2, json, smtplib, time, sys
 
 def getPrice(coin):
-	r = requests.get("http://coinmarketcap.com/currencies/"+coin+"/")
-	data = r.text
-	soup = BeautifulSoup(data, "html.parser")
-	price = soup.find(id="quote_price").string[1:-3]
+	response = urllib2.urlopen("https://api.coinmarketcap.com/v1/ticker/"+coin+"/?convert=SEK")
+	data = json.load(response)
+	price = data[0]['price_usd'][0:-4]
 	print "The price of "+coin+" is "+price+"$."
 	return price
 
